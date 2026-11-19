@@ -1,0 +1,15 @@
+.navbar
+{
+    display:flex;
+    justify-content: space-evenly;
+    width : 70%;
+    min-width : 400px;
+    border:1px black solid;
+    border-radius: 20px;
+    box-shadow:9px 9px 1px;
+    padding:10px;
+}
+
+.navbar li{
+  list-style-type: none;
+}

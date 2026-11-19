@@ -1,0 +1,10 @@
+.workout_card{
+    padding: 14px;
+    min-width: 200px;
+    width: 25%;
+    border-radius: 16px;
+    background-color: rgb(252, 101, 91);
+    margin:10px;
+    display:inline-block;
+    font-family: "poppins";
+}
