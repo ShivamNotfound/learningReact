@@ -3,7 +3,7 @@ import Workouts from "./Workouts.jsx"
 function List(props)
 {
     const list_items = props.list.map(item => 
-        <Workouts name = {item.name} muscle = {item.muscle} type = {item.type} />
+        <Workouts color = {props.color} name = {item.name} muscle = {item.muscle} type = {item.type} />
     )
 
     return(<div>

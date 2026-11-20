@@ -1,10 +1,38 @@
 .workout_card{
     padding: 14px;
-    min-width: 200px;
+    min-width: 150px;
     width: 25%;
     border-radius: 16px;
     background-color: rgb(252, 101, 91);
     margin:10px;
     display:inline-block;
     font-family: "poppins";
+}
+
+.workout_card:hover{
+    cursor:pointer;
+}
+
+
+.colors{
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.colors:hover{
+    cursor : pointer;
+}
+
+.colors_container{
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    right: 0px;
+    flex-direction: column;
+    height: 200px;
+}
+
+#custom_color::-webkit-color-swatch-wrapper {
+  opacity: 0;
 }
