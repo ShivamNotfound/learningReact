@@ -1,6 +1,7 @@
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 import List from './List.jsx'
+import Board from './Board.jsx'
 import Workouts from './Workouts.jsx'
 import Colors from './Colors.jsx'
 import './App.css'
@@ -17,9 +18,8 @@ function App() {
     <>
       <Header/>
       <Colors color = {color} setColor = {setColor}></Colors>
-      <List list = {workouts} color = {color} />
-      <List list = {workouts} color = {color} />
-      <Footer/>
+      <Board color = {color}></Board>
+      {/* <Footer/> */}
     </>
   )
 }

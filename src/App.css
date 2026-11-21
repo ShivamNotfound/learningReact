@@ -36,3 +36,19 @@
 #custom_color::-webkit-color-swatch-wrapper {
   opacity: 0;
 }
+
+.pixels{
+    width: 8px;
+    height: 8px;
+}
+
+.rows{
+    display: flex;
+    user-select: none;
+}
+
+#boardContainer{
+    border : 2px solid black;
+    display:inline-block;
+    
+}

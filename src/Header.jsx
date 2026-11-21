@@ -7,9 +7,6 @@ function Header()
             <h1>
                 Logo
             </h1>
-            <h2>
-                <Navbar/>
-            </h2>
         </>
     )
 }
