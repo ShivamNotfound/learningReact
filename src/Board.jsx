@@ -3,6 +3,8 @@ import React, {useState} from 'react'
 function Board(props)
 {
     const [isDrawing, setIsDrawing] = useState(false);
+
+    
     function UpdateState(state)
     {
         setIsDrawing(state);

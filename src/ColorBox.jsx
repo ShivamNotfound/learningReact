@@ -1,19 +1,27 @@
 import './App.css'
-import React, {useState} from "react"
+import React, {useState, useEffect, useContext} from "react"
+import { ColorContext, SetColorContext } from './App'
 function ColorBox(props)
 {
-    const [custom_color, setCustom_color] = useState("black");
+    const color = useContext(ColorContext);
+    const setColor = useContext(SetColorContext);
+
     const Change_color = (e) => {
-        setCustom_color(e.target.value);
-        props.setColor(e.target.value);
+        setColor(e.target.value);
     }
+
+    useEffect(() => {
+        document.getElementById("custom_color").style.backgroundColor = color;
+        }, [color]);
+
+
     if(props.color == "white")
         return(
-            <input className = "colors" style={{backgroundColor: custom_color}} type="color" id="custom_color" onChange={(e) => Change_color(e)}/>
+            <input className = "colors" style={{backgroundColor: "black"}} type="color" id="custom_color" onBlur={(e) => Change_color(e)}/>
             
     )
     return(
-        <div className = "colors" style={{backgroundColor: props.color}} onClick = {()=>props.setColor(props.color)}>
+        <div className = "colors" style={{backgroundColor: props.color}} onClick = {()=>setColor(props.color)}>
         </div>
         
     )

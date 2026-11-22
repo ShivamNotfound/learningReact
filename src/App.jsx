@@ -5,19 +5,23 @@ import Board from './Board.jsx'
 import Workouts from './Workouts.jsx'
 import Colors from './Colors.jsx'
 import './App.css'
-import React, {useState} from 'react'
+import React, {useState, createContext} from 'react'
+
+export const ColorContext = createContext();
+export const SetColorContext = createContext();
 
 function App() {
-  const workouts = [{"name": "Push-ups", "muscle": "Chest", "type":"Endurance"},
-                    {"name": "Pull-ups", "muscle": "Lat", "type":"Strength"},
-                    {"name": "Pike push-ups", "muscle": "Shoulder", "type":"Endurance"},
-  ]
 
   const [color, setColor] = useState("red");
   return (
     <>
       <Header/>
-      <Colors color = {color} setColor = {setColor}></Colors>
+      <ColorContext.Provider value={color}>
+        <SetColorContext.Provider value = {setColor}>
+          <Colors/>
+        </SetColorContext.Provider>
+      </ColorContext.Provider>
+
       <Board color = {color}></Board>
       {/* <Footer/> */}
     </>
